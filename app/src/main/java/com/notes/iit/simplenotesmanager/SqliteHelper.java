@@ -83,7 +83,7 @@ public class SqliteHelper extends SQLiteOpenHelper {
     public Cursor retriveAllNotesCursor() {
 
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cur =  db.rawQuery( "select rowid as _id,"+KEY_DESCRIPTION+","+KEY_MODIFIEDDATE+" from "+ TABLE_NOTES, null);
+        Cursor cur =  db.rawQuery( "select rowid as _id,"+KEY_DESCRIPTION+","+KEY_MODIFIEDDATE+" from "+ TABLE_NOTES + " ORDER BY " + KEY_MODIFIEDDATE + " DESC", null);
         return cur;
     }
     public void addUser(User user) {

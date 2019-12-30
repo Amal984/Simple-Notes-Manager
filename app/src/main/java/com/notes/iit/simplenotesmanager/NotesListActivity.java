@@ -25,14 +25,28 @@ public class NotesListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void initalizeViews() {
+        noteEditOpenButton=(FloatingActionButton)findViewById(R.id.fab);
+        listView=(ListView)findViewById(R.id.list);
+    }
+
+    // I have shifted the bellow code from onCreate method Becasue we need to execute this code every time.
+    // Every time means if we come from Login activity we need this code.
+    // And if we come from Add Note activity after saving a new note we need to execute this code also.
+    // In this time onActivity dont call. So we need to call this method from the onResume method.
+
+    private void getAllNotesData(){
         sqliteHelper=new SqliteHelper(this);
         Cursor cursor= sqliteHelper.retriveAllNotesCursor();
         CursorAdapter cursorAdapter=new NotesListAdapter(this,cursor);
         listView.setAdapter(cursorAdapter);
     }
 
-    private void initalizeViews() {
-        noteEditOpenButton=(FloatingActionButton)findViewById(R.id.fab);
-        listView=(ListView)findViewById(R.id.list);
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getAllNotesData();
     }
 }

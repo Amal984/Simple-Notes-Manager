@@ -2,28 +2,59 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:background="@color/colorBg"
     android:orientation="vertical">
-    <LinearLayout
+
+    <TextView
+        android:textSize="25sp"
+        android:textColor="#0424FC"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Add Note"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <RelativeLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
-            android:id="@+id/date"
+            android:id="@+id/txt_d"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
+            android:text="Date: "
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_toRightOf="@id/txt_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="1.12.19"
             android:textStyle="bold"
             />
+
         <TextView
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
             android:id="@+id/characterCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0 Characters"
             android:textStyle="bold"
             />
-    </LinearLayout>
+    </RelativeLayout>
     <android.support.design.widget.TextInputLayout
+        android:background="@color/colorWhite"
+        android:layout_margin="20dp"
         android:layout_height="match_parent"
         android:layout_width="match_parent">
         <EditText

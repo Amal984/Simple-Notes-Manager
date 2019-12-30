@@ -9,6 +9,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -20,6 +21,8 @@ public class ListEditActivity extends AppCompatActivity {
     EditText description;
     TextView dateModified;
     TextView characterCount;
+    ViewDialog alert = new ViewDialog();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,8 +69,15 @@ public class ListEditActivity extends AppCompatActivity {
                 Note note=new Note(description.getText().toString(),currentDateTime);
                 sqliteHelper.addNote(note);
                 dateModified.setText(currentDateTime);
+
+                alert.showDialog(ListEditActivity.this, "Note add successfully.");
+
+                description.setText("");
+
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }
