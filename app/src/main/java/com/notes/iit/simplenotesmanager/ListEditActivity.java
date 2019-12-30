@@ -70,6 +70,7 @@ public class ListEditActivity extends AppCompatActivity {
                 sqliteHelper.addNote(note);
                 dateModified.setText(currentDateTime);
 
+                // Add success alert message
                 alert.showDialog(ListEditActivity.this, "Note add successfully.");
 
                 description.setText("");

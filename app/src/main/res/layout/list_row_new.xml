@@ -35,6 +35,9 @@
 
             </LinearLayout>
 
+
+
+
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -46,12 +49,16 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textStyle="bold"/>
+
+
                 <TextView
                     android:id="@+id/notePreview"
                     android:textColor="#363636"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
                 <TextView
                     android:id="@+id/datetime"
                     android:layout_width="wrap_content"

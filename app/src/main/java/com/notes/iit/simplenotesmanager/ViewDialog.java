@@ -7,6 +7,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
+// Added as a new
 
 public class ViewDialog {
 

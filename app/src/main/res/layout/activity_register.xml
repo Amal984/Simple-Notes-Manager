@@ -6,6 +6,8 @@
     android:background="#BBBBBB"
     android:fitsSystemWindows="true">
 
+
+
     <LinearLayout
         android:padding="20dp"
         android:background="@color/colorWhite"
@@ -87,4 +89,6 @@
             android:text="@string/back_to_login"
             android:textColor="@android:color/white" />
     </LinearLayout>
+
+
 </ScrollView>

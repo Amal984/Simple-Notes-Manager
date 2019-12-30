@@ -39,7 +39,7 @@ public class NotesListActivity extends AppCompatActivity {
 
     private void getAllNotesData(){
         sqliteHelper=new SqliteHelper(this);
-        Cursor cursor= sqliteHelper.retriveAllNotesCursor();
+        Cursor cursor= sqliteHelper.retriveAllNotesCursor();    // Sqlite method change
         CursorAdapter cursorAdapter=new NotesListAdapter(this,cursor);
         listView.setAdapter(cursorAdapter);
     }

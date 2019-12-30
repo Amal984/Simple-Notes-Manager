@@ -80,6 +80,7 @@ public class SqliteHelper extends SQLiteOpenHelper {
         db.insert(TABLE_NOTES, null, values);
     }
 
+    // Method added as Desc
     public Cursor retriveAllNotesCursor() {
 
         SQLiteDatabase db = this.getReadableDatabase();
